@@ -68,7 +68,7 @@ def process_matches(str_in,  matches,  api_key,  db):
     
 def main():
     db = sqlite3.connect('data/mydb')
-    api_key = 'RGAPI-d5746a5b-bc54-4487-9fa8-92cbfc39b6ed'
+    api_key = '[API_KEY]'
     str_in = input("Enter Summoner Name ");
     r = requests.get('https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/{}?api_key={}'.format(str_in,  api_key))
     encrypt_a = r.json()['accountId']
